@@ -1,0 +1,268 @@
+/* Styles généraux et typographie historique */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    line-height: 1.8;
+    color: #2c2c2c;
+    background-color: #f5f0e8;
+    background-image: 
+        linear-gradient(45deg, rgba(139, 119, 90, 0.05) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(139, 119, 90, 0.05) 25%, transparent 25%);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* En-tête historique */
+header {
+    background: linear-gradient(to bottom, #3c3226, #5a4a3a);
+    color: #e8dcc8;
+    padding: 50px 0 30px;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #8b775a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#titre-principal {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+#sous-titre {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #c4b393;
+}
+
+/* Sélecteur de langue */
+.language-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.lang-btn {
+    background-color: rgba(232, 220, 200, 0.15);
+    border: 1px solid #8b775a;
+    color: #e8dcc8;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    backdrop-filter: blur(5px);
+}
+
+.lang-btn:hover {
+    background-color: rgba(232, 220, 200, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.lang-btn.active {
+    background-color: #8b775a;
+    color: #fff;
+    border-color: #a89060;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.flag {
+    margin-right: 5px;
+}
+
+/* Navigation des sections */
+.section-nav {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d4c5a9;
+}
+
+.section-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.section-nav a {
+    color: #5a4a3a;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.section-nav a:hover {
+    border-bottom-color: #8b775a;
+    color: #8b775a;
+}
+
+/* Sections historiques */
+.historical-section {
+    background-color: #ffffff;
+    margin-bottom: 40px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #8b775a;
+    position: relative;
+}
+
+.historical-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #d4c5a9, transparent);
+}
+
+.historical-section h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2rem;
+    color: #3c3226;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #d4c5a9;
+    padding-bottom: 10px;
+}
+
+.periode {
+    font-style: italic;
+    color: #8b775a;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    display: inline-block;
+    background-color: #f5f0e8;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.historical-section h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    color: #5a4a3a;
+    margin: 25px 0 15px 0;
+    padding-left: 15px;
+    border-left: 3px solid #8b775a;
+}
+
+.historical-section p {
+    text-align: justify;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-indent: 30px;
+}
+
+.historical-section p:first-of-type {
+    margin-top: 0;
+}
+
+/* Pied de page */
+footer {
+    background: linear-gradient(to top, #3c3226, #5a4a3a);
+    color: #c4b393;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+    border-top: 3px solid #8b775a;
+}
+
+#footer-texte {
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    #titre-principal {
+        font-size: 1.8rem;
+    }
+    
+    .historical-section {
+        padding: 25px 20px;
+    }
+    
+    .historical-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .historical-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .section-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .lang-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #titre-principal {
+        font-size: 1.5rem;
+    }
+    
+    #sous-titre {
+        font-size: 1rem;
+    }
+    
+    .historical-section {
+        padding: 20px 15px;
+    }
+    
+    .historical-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .historical-section p {
+        font-size: 1rem;
+        text-indent: 20px;
+    }
+    
+    header {
+        padding: 30px 0 20px;
+    }
+    
+    .language-selector {
+        gap: 8px;
+    }
+    
+    .lang-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+}
